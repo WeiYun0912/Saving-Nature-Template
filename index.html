@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/home.css" />
+  </head>
+  <body>
+    <div class="wallpaper"></div>
+    <section class="sec">
+      <header>
+        <a href="" class="logoSide"
+          ><img src="assets/images/bear_logo.png" class="logo" alt=""
+        /></a>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="topic.html">TOPIC</a></li>
+          <li><a href="register.html">REGISTER</a></li>
+          <li><a href="#">Newsetter</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>SAVE THE <br /><span style="color:#85ef47">FOREST</span></h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
+            sequi iure quidem? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Error reiciendis praesentium quos.
+          </p>
+          <a href="naturl.html" style="background-color:#85ef47">GO TO VOTE</a>
+        </div>
+        <div class="imgBox">
+          <img src="assets/images/bear_1.png" alt="" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="assets/images/bear_1.png"
+            class="img"
+            onclick="changeBanner('assets/images/bear_1.png','assets/images/bear_logo.png','assets/images/naturl.jpg','naturl.html','SAVE THE','FOREST','#85ef47');"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="assets/images/tree_1.png"
+            class="img"
+            onclick="changeBanner('assets/images/tree_1.png','assets/images/tree_logo.png','assets/images/tree.jpg','tree.html','PRUNING','TREES','#c24d2c');"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="assets/images/ice_1.png"
+            class="img"
+            onclick="changeBanner('assets/images/ice_1.png','assets/images/ice_logo.png','assets/images/ice.jpg','ice.html','STOP','GLOBAL WARNING','#12e2a3');"
+            alt=""
+          />
+        </li>
+      </ul>
+    </section>
+    <script>
+      function changeBanner(_img, _logo, _background,_href,_title1,_title2,_color) {
+        let mainImage = document.querySelector(".mainImage");
+        let wallpaper = document.querySelector(".wallpaper");
+        let logo = document.querySelector(".logo");
+        let mainTitle = document.querySelector(".textBox");
+        let imgBox = document.querySelector(".imgBox");
+        let logoSide = document.querySelector(".logoSide");
+        wallpaper.style.background = `url(${_background}) center center`;
+        wallpaper.style.backgroundSize = "cover";
+        mainTitle.innerHTML = `
+          <h2>${_title1} <br /><span style="color:${_color}">${_title2}</span></h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
+              sequi iure quidem? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Error reiciendis praesentium quos.
+            </p>
+            <a href="${_href}" style="background-color:${_color}">GO TO VOTE</a>
+        `
+        imgBox.innerHTML = `
+          <img src="${_img}" alt="" />
+        `
+        logoSide.innerHTML = `
+          <img src="${_logo}" class="logo" alt=""/>
+        `
+      }
+
+    </script>
+  </body>
+</html>

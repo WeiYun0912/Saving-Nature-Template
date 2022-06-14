@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,700;0,800;0,900;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #be6a15; */
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.wallpaper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("../images/tree.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+}
+
+.wallpaper::before {
+  content: "";
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  opacity: 0.5;
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  position: relative;
+  max-width: 80px;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+  font-size: 18px;
+}
+
+header ul li a {
+  display: inline-block;
+  color: #fff;
+  font-weight: 300;
+  margin-left: 40px;
+  text-decoration: none;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content .textBox {
+  position: relative;
+  max-width: 1000px;
+}
+
+.content .textBox h2 {
+  color: #fff;
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+
+.content .textBox h2 span {
+  /* font-size: 2em; */
+}
+
+.content .textBox h2 .textMarker {
+  color: #c24d2c;
+}
+
+.content .textBox p {
+  color: #fff;
+}
+
+.content .textBox button {
+  margin: 50px;
+  padding: 8px 40px;
+  font-size: 2.5em;
+  outline: none;
+  border: none;
+  background: #fff;
+  color: #111;
+  border-radius: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.content .textBox button.yes {
+  background-color: #2f89fc;
+  color: #fff;
+}
+
+.content .textBox button.no {
+  background-color: #fd0054;
+  color: #fff;
+}
