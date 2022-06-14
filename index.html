@@ -15,21 +15,17 @@
         /></a>
         <ul>
           <li><a href="index.html">HOME</a></li>
-          <li><a href="topic.html">TOPIC</a></li>
-          <li><a href="register.html">REGISTER</a></li>
-          <li><a href="#">Newsetter</a></li>
-          <li><a href="#">Contact</a></li>
         </ul>
       </header>
       <div class="content">
         <div class="textBox">
-          <h2>SAVE THE <br /><span style="color:#85ef47">FOREST</span></h2>
+          <h2>SAVE THE <br /><span style="color: #85ef47">FOREST</span></h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
             sequi iure quidem? Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Error reiciendis praesentium quos.
           </p>
-          <a href="naturl.html" style="background-color:#85ef47">GO TO VOTE</a>
+          <a href="naturl.html" style="background-color: #85ef47">GO TO VOTE</a>
         </div>
         <div class="imgBox">
           <img src="assets/images/bear_1.png" alt="" />
@@ -63,7 +59,15 @@
       </ul>
     </section>
     <script>
-      function changeBanner(_img, _logo, _background,_href,_title1,_title2,_color) {
+      function changeBanner(
+        _img,
+        _logo,
+        _background,
+        _href,
+        _title1,
+        _title2,
+        _color
+      ) {
         let mainImage = document.querySelector(".mainImage");
         let wallpaper = document.querySelector(".wallpaper");
         let logo = document.querySelector(".logo");
@@ -80,15 +84,14 @@
               adipisicing elit. Error reiciendis praesentium quos.
             </p>
             <a href="${_href}" style="background-color:${_color}">GO TO VOTE</a>
-        `
+        `;
         imgBox.innerHTML = `
           <img src="${_img}" alt="" />
-        `
+        `;
         logoSide.innerHTML = `
           <img src="${_logo}" class="logo" alt=""/>
-        `
+        `;
       }
-
     </script>
   </body>
 </html>
